@@ -17,54 +17,66 @@
 <body ng-app="myApp" ng-controller="myController">
     <main class="section">
         <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
+            </div> -->
+            <div class="card">
                 <h2>welcome to login page</h2>
-                <div class="row">
-                    <form ng-submit="myForm()" class="myForm">
-                        <div class="input">
-                            <label>name</label>
-                            <input type="text" name="name" ng-model="name" placeholder="Enter The Name" required>
-                            <span ng-show="myForm.name.$touched && myForm.name.$invalid">Enter name</span>
-                        </div>
-                        <div class="input">
-                            <label>surname</label>
-                            <input type="text" name="surname" ng-model="surname" placeholder="Enter The Name" required>
-                            <span ng-show="myForm.surname.$touched && myForm.name.$invalid">Enter your surname</span>
-                        </div>
-                        <div class="input">
-                            <label>phoneNumber</label>
-                            <input type="number" name="phoneNumber" ng-model="phoneNumber" ng-minlength="10"
-                                ng-maxlength="10" placeholder="Enter your phone number" required>
-                            <span ng-show="myForm.phoneNumber.$touched && myForm.phoneNumber.$invalid">Enter phone
-                                number</span>
-                            <span
-                                ng-show="((myForm.phoneNumber.$error.minlength || myForm.phoneNumber.$error.maxlength)&& myForm.phoneNumber.$untouched)">Enter
-                                10 digit number</span>
-                        </div>
-                        <div class="input">
-                            <label>Email</label>
-                            <input type="Email" name="Email" ng-model="Email" placeholder="Enter The Email"
-                                ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
-                            <span ng-show="myForm.Email.$touched && myForm.Email.$invalid">Enter Email</span>
-                            <span ng-show="myForm.Email.$dirty && myForm.Email.$pattern">Enter Valid Email
-                                Address</span>
-                        </div>
-                        <button class="btn btn-info" ng-disabled="form.$invalid" type="submit">SignUp</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="person">
-                <h5>person Details</h5>
-                <div class="card">
-                    <div ng-repeat="form in person">
-                        <h4>name:{{form.name}}</h4>
-                        <h4>Email:{{form.Email}}</h4>
-                        <h4>phoneNumber:{{form.phoneNumber}}</h4>
-                        
-
+                <div class="card-body">
+                    <div class="row">
+                        <form ng-submit="myForm()" name="myForm">
+                            <p>
+                                <label>name:</label>
+                                <input type="text" name="name" ng-model="name" placeholder="Enter The Name" required>
+                                <span ng-show="myForm.name.$touched && myForm.name.$invalid">Enter name</span>
+                            </p>
+                            <p>
+                                <label>surname:</label>
+                                <input type="text" name="surname" ng-model="surname" placeholder="Enter The Name"
+                                    required>
+                                <span ng-show="myForm.surname.$touched && myForm.name.$invalid">Enter your
+                                    surname</span>
+                            </p>
+                            <p>
+                                <label>phoneNumber:</label>
+                                <input type="number" name="phoneNumber" ng-model="phoneNumber" ng-minlength="10"
+                                    ng-maxlength="10" placeholder="Enter your phone number" required>
+                                <span ng-show="myForm.phoneNumber.$touched && myForm.phoneNumber.$invalid">Enter phone
+                                    number</span>
+                                <span
+                                    ng-show="((myForm.phoneNumber.$error.minlength || myForm.phoneNumber.$error.maxlength)&& myForm.phoneNumber.$untouched)">Enter
+                                    10 digit number</span>
+                            </p>
+                            <p>
+                                <label>Email :</label>
+                                <input type="Email" name="Email" ng-model="Email" placeholder="Enter The Email"
+                                    ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+                                <span ng-show="myForm.Email.$touched && myForm.Email.$invalid">Enter Email</span>
+                                <span ng-show="myForm.Email.$dirty && myForm.Email.$pattern">Enter Valid Email
+                                    Address</span>
+                            </p>
+                            <p>
+                                <label>password: </label>
+                                <input type="text" name="password" ng-model="password" ng-minlength="4" ng-maxlength="8"
+                                    placeholder="Enter The password" required>
+                                <span ng-show="myForm.password.$touched && myForm.password.$invalid">Enter
+                                    password</span>
+                                <span ng-show="myForm.password.$error.minlength && myForm.password.$dirty">
+                                    password is too small
+                                </span>
+                                <span ng-show="myForm.password.$error.maxlength && myForm.password.$dirty">
+                                    password is
+                                    too long</span>
+                            </p>
+                            <p>
+                                <label>confirmPassword: </label>
+                                <input type="text" name="conformPassword" ng-model="confirmPassword"
+                                    placeholder="enter confirm password">
+                                <span
+                                    ng-show="myForm.confirmPassword.$touched && myForm.confirmPassword.$invalid">Enter</span>
+                            </p>
+                            <button class="btn btn-info" ng-disabled="form.$invalid" type="submit"
+                                ng-click="myForm()">SignUp</button>
+                        </form>
                     </div>
                 </div>
             </div>

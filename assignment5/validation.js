@@ -22,10 +22,12 @@ app.controller("myController", function ($scope) {
             })
         }
     }
-    if(password==confirmPassword){
-        $scope.meassage=' password is valid'
-    }
-    if(password !=confirmPassword){
-        $scope.meassage='password is invalid'
-    }
+    // if(password===confirmPassword){
+    //     $scope.meassage=' password is valid'
+    // }else{
+    //     $scope.meassage='password is invalid'
+    // };
+    // if(password !=confirmPassword){
+        
+    // }
 })
