@@ -1,0 +1,17 @@
+/* .header{
+   background-color: black;
+} */
+/* img{
+    float: left;
+    padding: 2%;
+} */
+.menu_list{
+    display: inline-flex;
+    list-style-type: none;
+    float: right;
+    padding:1%;
+}
+.menu_items{
+    margin-right: 15px;
+    margin-top: 15px;
+}

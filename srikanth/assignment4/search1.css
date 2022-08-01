@@ -1,0 +1,43 @@
+
+.header{
+    padding: 1%;
+    background-color: rgb(49, 80, 80);
+}
+.list{
+    font-size: medium;
+    list-style-type: none;
+    display: inline-flex;
+}
+a{  
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    margin: 3%;
+}
+
+p,
+h5 {
+    padding-left: 10px;
+}
+
+ #button{
+    width: 225%;
+} 
+.hd {
+    text-align: center;
+}
+
+.items {
+    margin: 27px;
+}
+h6{
+    font-weight: bold;
+}
+.card-img{
+    width: 30%;
+}
+.row items{
+    background-image: url(back.jpg);
+}
