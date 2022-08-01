@@ -1,6 +1,15 @@
-.card{
+h2{
     text-align: center;
 }
-input{
-    padding-left: 25px;
+label{
+    text-align: left;
+}
+p{
+    padding-left: 20px;
+}
+.btn btn-secondary{
+    text-align: center;
+}
+span{
+    color: red;
 }
